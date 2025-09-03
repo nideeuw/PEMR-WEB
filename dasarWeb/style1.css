@@ -1,0 +1,79 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    background-image: url(img/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+/* Latihan 1 */
+.container-satu{
+    width: 900px;
+    margin: 50px auto;
+    background-color: #DCDCDC;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2)
+}
+
+/* Untuk Tugas Jobsheet 2 */
+.konten{
+    display: flex;
+    grid-template-columns: 220px 1fr 260px;
+    align-items: start;
+    gap: 32px;
+    flex: 1;
+}
+.sidebar-satu h3{
+    white-space: nowrap;
+}
+.sidebar-satu{
+    width: 850px;
+}
+.kolom-utama {
+    text-align: justify;
+}
+.sidebar-dua {
+    width: 1000px;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.article-img {
+    width: 220px;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+footer {
+    text-align: center;
+    background-color: #DCDCDC;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px){
+  .konten{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .article-img{ width: 100%; }
+}
