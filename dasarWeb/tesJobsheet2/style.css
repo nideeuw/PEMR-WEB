@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+}
+.kotak1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.kotak2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.kotak3{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
