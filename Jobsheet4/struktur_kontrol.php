@@ -60,69 +60,64 @@ foreach ($nilaiSiswa as $nilai){
     echo "Nilai: $nilai (Lulus) <br>";
 }
 
-echo "<br> Ada seorang guru ingin menghitung total nilai dari 10 siswa dalam ujian matematika. 
-Guru ini ingin mengabaikan dua nilai tertinggi dan dua nilai terendah. 
-Bantu guru ini menghitung total nilai yang akan digunakan untuk menentukan nilai rata-rata setelah mengabaikan nilai tertinggi dan terendah. 
-Berikut daftar nilai dari 10 siswa (85, 92, 78, 64, 90, 75, 88, 79, 70, 96) <br><br>";
+echo "<br> Seorang guru Bahasa Inggris ingin menghitung total nilai ujian dari 12 siswa di kelasnya. 
+Untuk membuat penilaian lebih adil, guru memutuskan untuk mengabaikan dua nilai tertinggi dan dua nilai terendah dari daftar nilai yang ada. 
+Setelah itu, guru akan menghitung total nilai dari sisa siswa untuk digunakan dalam menentukan rata-rata kelas. 
+Nilai yang diperoleh 12 siswa tersebut adalah: 80, 95, 67, 72, 88, 91, 76, 84, 69, 93, 78, dan 85. <br><br>";
 
-$totalSiswa = 10;
-$nilai10Siswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+$nilai12Siswa = [80, 95, 67, 72, 88, 91, 76, 84, 69, 93, 78, 85];
 
-for ($i = 0; $i < count($nilai10Siswa) - 1; $i++) {
-    for ($j = 0; $j < count($nilai10Siswa) - $i - 1; $j++) {
-        if ($nilai10Siswa[$j] > $nilai10Siswa[$j + 1]) {
+for ($i = 0; $i < count($nilai12Siswa) - 1; $i++) {
+    for ($j = 0; $j < count($nilai12Siswa) - $i - 1; $j++) {
+        if ($nilai12Siswa[$j] > $nilai12Siswa[$j + 1]) {
             
-            $temp = $nilai10Siswa[$j];
-            $nilai10Siswa[$j] = $nilai10Siswa[$j + 1];
-            $nilai10Siswa[$j + 1] = $temp;
+            $temp = $nilai12Siswa[$j];
+            $nilai12Siswa[$j] = $nilai12Siswa[$j + 1];
+            $nilai12Siswa[$j + 1] = $temp;
         }
     }
 }
 
 $totalNilai = 0;
-for ($i = 2; $i < count($nilai10Siswa) - 2; $i++) {
-    $totalNilai += $nilai10Siswa[$i];
+for ($i = 2; $i < count($nilai12Siswa) - 2; $i++) {
+    $totalNilai += $nilai12Siswa[$i];
 }
-$rataRata = $totalNilai / (count($nilai10Siswa) - 4);
+$rataRata = $totalNilai / (count($nilai12Siswa) - 4);
 
 echo "Total nilai setelah mengabaikan dua nilai tertinggi dan dua nilai terendah: {$totalNilai} <br>";
 echo "Rata-rata nilai: {$rataRata} <br>";
 
-echo "<br> Seorang pelanggan ingin membeli sebuah produk dengan harga Rp 120.000. 
-Toko tersebut menawarkan diskon sebesar 20% untuk pembelian di atas Rp 100.000. 
-Bantu pelanggan ini untuk menghitung harga yang harus dibayar setelah mendapatkan diskon. <br><br>";
+echo "<br> Seorang pembeli ingin membeli sebuah jaket dengan harga Rp 250.000. 
+Toko memberikan potongan harga sebesar 15% untuk setiap pembelian di atas Rp 200.000. 
+Hitunglah berapa jumlah uang yang harus dibayar pembeli tersebut setelah mendapatkan diskon. <br><br>";
 
-$hargaProduk = 120000;
-$diskon = 20;
+$hargaProduk = 250000;
+$diskon = 15;
+$jmlDiskon = ($hargaProduk * ($diskon / 100));
 
-if ($hargaProduk > 100000){
-    $hargaSetelahDiskon = $hargaProduk - ($hargaProduk * ($diskon / 100));
-    echo "Total Harga (Mendapat Diskon): Rp {$hargaSetelahDiskon} <br>";
+echo "Harga Jaket : {$hargaProduk}<br>";
+echo "Potongan Diskon jika pembelian di atas 200.000 : {$diskon}%<br>";
+if ($hargaProduk > 200000){
+    $hargaSetelahDiskon = $hargaProduk - $jmlDiskon;
+    echo  "Jumlah diskon di dapat: Rp {$jmlDiskon} <br>";
+    echo "Total harus dibayar (Mendapat Diskon): Rp {$hargaSetelahDiskon} <br>";
 } else {
-    echo "Total Harga: Rp {$hargaProduk} <br>";
+    echo "Total harus dibayar: Rp {$hargaProduk} <br>";
 }
 
-echo "<br> Seorang pemain game ingin menghitung total skor mereka dalam permainan. 
-Mereka mendapatkan skor berdasarkan poin yang mereka kumpulkan. 
-Jika mereka memiliki lebih dari 500 poin, maka mereka akan mendapatkan hadiah tambahan. 
-Buat tampilan baris pertama “Total skor pemain adalah: (poin)”. 
-Dan baris kedua “Apakah pemain mendapatkan hadiah tambahan? (YA/TIDAK)” <br><br>";
+echo "<br> Seorang atlet lari ingin menghitung total jarak yang telah ditempuh selama latihan. 
+Jarak tersebut dihitung dari akumulasi kilometer yang berhasil dicapai setiap harinya. 
+Jika total jarak yang ditempuh lebih dari 100 km, maka atlet tersebut akan mendapatkan bonus latihan khusus. 
+Buatlah tampilan pada baris pertama dengan teks “Total jarak tempuh atlet adalah: (kilometer)” 
+dan pada baris kedua dengan teks “Apakah atlet mendapatkan bonus latihan? (YA/TIDAK)”  <br><br>";
 
-$poin1 = 550;
-$poin2 = 500;
-
-echo "Total skor pemain 1 adalah: {$poin1} <br>";
-echo "Total skor pemain 2 adalah: {$poin2} <br>";
-
-if ($poin1 > 500) {
-    echo "Apakah pemain 1 mendapatkan hadiah tambahan? YA <br>";
-} else {
-    echo "Apakah pemain 1 mendapatkan hadiah tambahan? TIDAK <br>";
-}
-
-if ($poin2 > 500) {
-    echo "Apakah pemain 2 mendapatkan hadiah tambahan? YA <br><br>";
-} else {
-    echo "Apakah pemain 2 mendapatkan hadiah tambahan? TIDAK <br><br>";
-}
+$jarak1 = 150;
+$bonusLatihan1 = ($jarak1 > 100) ? "Ya": "Tidak";
+echo "Total jarak yang telah ditempuh oleh atlet 1 adalah: {$jarak1} <br>";
+echo "Apakah atlet 1 mendapatkan bonus latihan? {$bonusLatihan1} <br>";
+echo "<br>";
+$jarak2 = 98;
+$bonusLatihan2 = ($jarak2 > 100) ? "Ya": "Tidak";
+echo "Total jarak yang telah ditempuh oleh atlet 2 adalah: {$jarak2} <br>";
+echo "Apakah atlet 2 mendapatkan bonus latihan? {$bonusLatihan2} <br>";
 ?>

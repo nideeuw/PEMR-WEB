@@ -82,17 +82,17 @@ echo "Hasil Tidak Identik : {$hasilTidakIdentik} <br>";
 
 echo "<br><br>";
 
-echo "<br><br> Sebuah restoran memiliki 45 kursi di dalamnya. 
-Pada suatu malam, 28 kursi telah ditempati oleh pelanggan. 
-Berapa persen kursi yang masih kosong di restoran tersebut? <br><br>";
+echo "<br><br> Sebuah perpustakaan memiliki 120 rak buku. 
+Saat ini, 85 rak sudah terisi penuh dengan buku, sedangkan sisanya masih kosong. 
+Hitunglah berapa persen rak buku yang masih kosong di perpustakaan tersebut.  <br><br>";
 
-$kursiRestoran = 45;
-$kursiTerisi = 28;
-$kursiKosong = $kursiRestoran - $kursiTerisi;
-$persenKursiKosong = ($kursiKosong / $kursiRestoran) * 100;
+$rakBukuTotal = 120;
+$rakBukuTerisi = 85;
+$rakBukuKosong = $rakBukuTotal - $rakBukuTerisi;
+$persenRakBukuKosong = ($rakBukuKosong / $rakBukuTotal) * 100;
 
-echo "Total Kursi Restoran : {$kursiRestoran} <br>";
-echo "Total Kursi Terisi : {$kursiTerisi} <br>";
-echo "Total Kursi Kosong : {$kursiKosong} <br>";
-echo "Persen Kursi Kosong : {$persenKursiKosong} % <br>";
+echo "Total Rak Buku : {$rakBukuTotal} <br>";
+echo "Total Rak Buku Terisi : {$rakBukuTerisi} <br>";
+echo "Total Rak Buku Kosong : {$rakBukuKosong} <br>";
+echo "Persen Rak Buku Kosong : {$persenRakBukuKosong} % <br>";
 ?>
