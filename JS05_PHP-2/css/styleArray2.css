@@ -1,0 +1,45 @@
+/* Menambahkan gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 20px;
+}
+
+/* Styling untuk header (judul) */
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Styling untuk tabel */
+table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk header tabel */
+th {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Styling untuk sel data tabel */
+td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling untuk tabel jika hover */
+tr:hover {
+    background-color: #f1f1f1;
+}
